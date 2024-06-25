@@ -1,0 +1,16 @@
+{
+  "name": "expedia",
+  "version": "1.0.0",
+  "description": "A tours and travel website",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Karan",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}

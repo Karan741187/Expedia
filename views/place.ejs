@@ -1,0 +1,86 @@
+<style>
+    
+    .infoBar{
+        width: 100%;
+        background-color: black;
+        height: 100px;
+        display: flex;
+    }
+    .obj{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .obj p{
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .sep{
+        border-left: 0.2px solid rgb(243, 238, 238);
+        height: 60px;
+    }
+    .left{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .infoBar button{
+        background-color: rgb(255,204,0);
+        width: 15%;
+        height: 70%;
+        margin-top: 1%;
+    }
+    
+</style>
+
+<% if(page.name=="alaska") {%>
+    <%- include("alaska.ejs",{page}); %>
+<% }else if(page.name=="australia"){%>
+        
+    <%- include("aus.ejs",{page}); %>
+<% }else if(page.name=="bhutan"){%>
+    <%- include("bhu.ejs",{page}); %>
+            
+<% }else if(page.name=="china") {%>
+    <%- include("china.ejs",{page}); %>
+                
+<% }else if(page.name=="tajMahal"){ %>
+    <%- include("taj.ejs",{page}); %>
+                    
+<% } else{%>
+    <%- include("nor.ejs",{page}); %>
+
+<% } %>
+<div class="infoBar">
+    <div class="left">
+        <div class="obj">
+            <p class="head">Duration</p>
+            <p class="desc"><%= page.dur %></p>
+        </div>
+        <div class="sep"></div>
+        <div class="obj">
+            <p class="head">Trip Type</p>
+            <p class="desc"><%= page.tripType%></p>
+        </div>
+        <div class="sep"></div>
+        <div class="obj">
+            <p class="head">Activity Level</p>
+            <p class="desc"><%= page.activity %></p>
+        </div>
+        <div class="sep"></div>
+        <div class="obj">
+            <p class="head">Service Level</p>
+            <p class="desc"><%= page.service %></p>
+        </div>
+        <div class="sep"></div>
+        <div class="obj">
+            <p class="head">Estimated Group Size</p>
+            <p class="desc"><%= page.grp %></p>
+        </div>
+    </div>
+    <button type="button">RESERVE ONLINE</button>
+</div>
+
